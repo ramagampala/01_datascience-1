@@ -1,0 +1,156 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="GradentDescent.htm"><LINK rel=File-List 
+href="GradentDescent_files/filelist.xml"></HEAD>
+<BODY lang=en-IN style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 15.089in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 4.001in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.556in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>Math 
+behind Gradient Descent</P></DIV>
+<DIV 
+style="WIDTH: 1.902in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0.556in">
+<P style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">29 
+August 2017</P>
+<P 
+style="FONT-SIZE: 10pt; FONT-FAMILY: Calibri; COLOR: #767676; MARGIN: 0in">11:52 
+AM</P></DIV>
+<DIV 
+style="WIDTH: 14.652in; MARGIN-TOP: 0.097in; DIRECTION: ltr; MARGIN-LEFT: 0.14in"><NOBR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;" 
+src="GradentDescent_files/mht86B(1).tmp" width=1408 height=960><BR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼&#13;&#10;" 
+src="GradentDescent_files/mht87E(1).tmp" width=1408 height=960><BR><IMG 
+alt="I&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;" 
+src="GradentDescent_files/mht890(1).tmp" width=1408 height=960><BR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;" 
+src="GradentDescent_files/mht8A3(1).tmp" width=1408 height=960><BR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼&#13;&#10;" 
+src="GradentDescent_files/mht8B5(1).tmp" width=1408 height=828><BR></NOBR></DIV>
+<DIV 
+style="WIDTH: 11.227in; MARGIN-TOP: 0.39in; DIRECTION: ltr; MARGIN-LEFT: 0.388in"><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;" 
+src="GradentDescent_files/mht8B8(1).tmp" width=1078 height=706></DIV>
+<TABLE 
+style="BORDER-LEFT-WIDTH: 0pt; BORDER-RIGHT-WIDTH: 0pt; WIDTH: 11.965in; BORDER-BOTTOM-WIDTH: 0pt; MARGIN-TOP: 0.452in; BORDER-COLLAPSE: collapse; DIRECTION: ltr; MARGIN-LEFT: 0.785in; BORDER-TOP-WIDTH: 0pt" 
+cellSpacing=0 cols=3 cellPadding=0 border=0 valign="top">
+  <TBODY>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 5.738in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.511in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 5.715in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 3.826in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="HEIGHT: 3.838in; WIDTH: 5.738in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top rowSpan=2><IMG alt="07, 07 " 
+      src="GradentDescent_files/mht8CB(1).tmp" width=547 height=364></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 3.826in; WIDTH: 0.511in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="HEIGHT: 3.826in; WIDTH: 5.715in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top><IMG 
+      alt="ho (:r) &#10;(for fixed 00, 01, this is a function of x) &#10;01) &#10;(function of the parameters 00, 01) &#10;700 &#10;600 &#10;500 &#10;400 &#10;300 &#10;200 &#10;100 &#10;1000 &#10;Training data &#10;—Current hypothesis &#10;2000 &#10;3000 &#10;4000 &#10;Size (feet2) &#10;0.5 &#10;0.4 &#10;0.3 &#10;0.2 &#10;0.1 &#10;-0.1 &#10;-0.2 &#10;-0.3 &#10;-0.4 &#10;-iooo &#10;-500 &#10;500 &#10;1000 &#10;1500 &#10;2000 &#10;Andre " 
+      src="GradentDescent_files/mht8ED(1).tmp" width=545 height=363></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.011in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.011in; WIDTH: 0.511in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.011in; WIDTH: 5.715in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR></TBODY></TABLE>
+<DIV 
+style="WIDTH: 12.647in; MARGIN-TOP: 0.088in; DIRECTION: ltr; MARGIN-LEFT: 0.863in">
+<P style="MARGIN: 0in"><IMG alt="￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;" 
+src="GradentDescent_files/mht910(1).tmp" width=1214 height=132></P></DIV>
+<DIV 
+style="WIDTH: 14.245in; MARGIN-TOP: 0.268in; DIRECTION: ltr; MARGIN-LEFT: 0.785in"><NOBR><IMG 
+alt="2017-08-29 (9).png Gradient descent algorithm &#10;repeat until convergence &#10;(for J &#10;Correct: Simultaneous update &#10;temp() 00 — 01) &#10;01 - 01) &#10;templ &#10;00 := tempo &#10;01 := templ &#10;0 and J &#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼&#13;&#10;" 
+src="GradentDescent_files/mht913(1).tmp" width=1368 height=960><BR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼&#13;&#10;" 
+src="GradentDescent_files/mht925(1).tmp" width=1368 height=420><BR></NOBR></DIV>
+<DIV 
+style="WIDTH: 15.089in; MARGIN-TOP: 0.115in; DIRECTION: ltr; MARGIN-LEFT: 0in"><NOBR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;" 
+src="GradentDescent_files/mht938(1).tmp" width=1450 height=960><BR><IMG 
+alt="Ink Drawings&#13;&#10;2017-08-29 (10).png 02 &#10;09 &#10;07 &#10;06 &#10;0.6 &#10;03 &#10;02 &#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;" 
+src="GradentDescent_files/mht94A(1).tmp" width=1450 height=960><BR><IMG 
+alt="2017-08-29 (10).png 02 &#10;09 &#10;07 &#10;06 &#10;0.6 &#10;03 &#10;02 &#13;&#10;Ink Drawings&#13;&#10;" 
+src="GradentDescent_files/mht95D(1).tmp" width=1450 height=106><BR></NOBR></DIV>
+<DIV 
+style="WIDTH: 0.583in; MARGIN-TOP: 0.181in; DIRECTION: ltr; MARGIN-LEFT: 3.392in">
+<P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><IMG 
+src="GradentDescent_files/mht970(1).tmp" width=66 
+height=20></P></DIV></DIV></DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P style="MARGIN: 0in">&nbsp;</P>
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 13.95in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 4.021in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.086in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>Gradient 
+Descent Convergence</P></DIV>
+<DIV 
+style="WIDTH: 13.863in; MARGIN-TOP: 0.038in; DIRECTION: ltr; MARGIN-LEFT: 0.086in"><NOBR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;30 August 2017&#13;&#10;3:19 PM&#13;&#10;" 
+src="GradentDescent_files/mht973(1).tmp" width=1332 height=960><BR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;" 
+src="GradentDescent_files/mht985(1).tmp" width=1332 height=596><BR></NOBR></DIV>
+<DIV 
+style="WIDTH: 10.45in; MARGIN-TOP: 0.416in; DIRECTION: ltr; MARGIN-LEFT: 0.586in">
+<P style="FONT-SIZE: 16pt; FONT-FAMILY: Calibri; MARGIN: 0in">i) Min-Max Scaling 
+(normalization) : Values are shifted and re-scaled so that they end up ranging 
+between 0 and 1. We do this by subtracting MIN value and divide by MAX minus MIN 
+value. Scikit-Learn provides a transformer called MinMaxScaler, there is a hyper 
+parameter feature_range that lets you change the range to some thing other than 
+0 and 1.</P>
+<P style="FONT-SIZE: 16pt; FONT-FAMILY: Calibri; MARGIN: 0in">&nbsp;</P>
+<P style="FONT-SIZE: 16pt; FONT-FAMILY: Calibri; MARGIN: 0in">ii) 
+Standardization : Subtract MEAN value and then divide by STANDARD DEVIATION 
+(standardized values always have 0 mean), so that the resulting distribution has 
+a unit variance.</P></DIV>
+<DIV 
+style="WIDTH: 12.359in; MARGIN-TOP: 0.039in; DIRECTION: ltr; MARGIN-LEFT: 0in"><NOBR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;" 
+src="GradentDescent_files/mht998(1).tmp" width=1186 height=960><BR><IMG 
+alt="&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;" 
+src="GradentDescent_files/mht9AB(1).tmp" width=1186 
+height=526><BR></NOBR></DIV></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

@@ -1,0 +1,513 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns="http://www.w3.org/TR/REC-html40" xmlns:o = 
+"urn:schemas-microsoft-com:office:office" xmlns:dt = 
+"uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><HEAD><META content="IE=5.0000" 
+http-equiv="X-UA-Compatible">
+
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=ProgId content=OneNote.File>
+<META name=GENERATOR content="MSHTML 11.00.10570.1001"><LINK id=Main-File 
+rel=Main-File href="CrossEntropyIntuition.htm"><LINK rel=File-List 
+href="CrossEntropyIntuition_files/filelist.xml"></HEAD>
+<BODY lang=en-IN style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri">
+<DIV style="DIRECTION: ltr">
+<DIV style="WIDTH: 13.156in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0in">
+<DIV 
+style="WIDTH: 3.094in; MARGIN-TOP: 0in; DIRECTION: ltr; MARGIN-LEFT: 0.2in">
+<P style='FONT-SIZE: 20pt; FONT-FAMILY: "Calibri Light"; MARGIN: 0in'>Cross 
+Entropy Intuition</P></DIV>
+<DIV 
+style="WIDTH: 13.156in; MARGIN-TOP: 0.042in; DIRECTION: ltr; MARGIN-LEFT: 0in"><NOBR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼&#13;&#10;￼&#13;&#10;25 September 2017&#13;&#10;11:17 AM&#13;&#10;" 
+src="Cross%20Entropy%20Intuition_files/mht390A(1).tmp" width=1896 
+height=1440><BR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;" 
+src="Cross%20Entropy%20Intuition_files/mht391D(1).tmp" width=1896 
+height=1440><BR><IMG 
+alt="Ink Drawings&#13;&#10;￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼&#13;&#10;" 
+src="Cross%20Entropy%20Intuition_files/mht392F(1).tmp" width=1896 
+height=116><BR></NOBR></DIV>
+<DIV 
+style="WIDTH: 12.431in; MARGIN-TOP: 0.097in; DIRECTION: ltr; MARGIN-LEFT: 0.138in"><NOBR><IMG 
+alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼￼&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼￼￼￼￼￼&#13;&#10;￼￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;" 
+src="Cross%20Entropy%20Intuition_files/mht3942(1).tmp" width=1790 
+height=1496><BR></NOBR></DIV>
+<TABLE 
+style="BORDER-LEFT-WIDTH: 0pt; BORDER-RIGHT-WIDTH: 0pt; WIDTH: 11.479in; BORDER-BOTTOM-WIDTH: 0pt; MARGIN-TOP: 0.184in; BORDER-COLLAPSE: collapse; DIRECTION: ltr; MARGIN-LEFT: 0.039in; BORDER-TOP-WIDTH: 0pt" 
+cellSpacing=0 cols=11 cellPadding=0 border=0 valign="top">
+  <TBODY>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 2.481in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.238in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.588in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 2.139in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.429in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.197in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1px; WIDTH: 4.022in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.007in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.007in; WIDTH: 2.481in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.007in; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.007in; WIDTH: 0.238in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.007in; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.007in; WIDTH: 0.588in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.007in; WIDTH: 2.139in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.007in; WIDTH: 0.429in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.007in; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="HEIGHT: 4.334in; WIDTH: 0.197in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top rowSpan=10><IMG 
+      src="Cross%20Entropy%20Intuition_files/mht3955(1).tmp" width=28 
+    height=624></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.007in; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.007in; WIDTH: 4.022in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.109in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.109in; WIDTH: 2.481in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.109in; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.109in; WIDTH: 0.238in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.109in; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.109in; WIDTH: 0.588in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.109in; WIDTH: 2.139in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.109in; WIDTH: 0.429in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.109in; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.109in; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="HEIGHT: 4.027in; WIDTH: 4.022in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top rowSpan=7><IMG 
+      alt="Ink Drawings&#13;&#10;￼￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼&#13;&#10;￼&#13;&#10;" 
+      src="Cross%20Entropy%20Intuition_files/mht3958(1).tmp" width=580 
+      height=580></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.084in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.084in; WIDTH: 2.481in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.084in; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="HEIGHT: 4.261in; WIDTH: 0.238in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top rowSpan=9><IMG 
+      src="Cross%20Entropy%20Intuition_files/mht396A(1).tmp" width=34 
+    height=614></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.084in; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.084in; WIDTH: 0.588in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.084in; WIDTH: 2.139in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.084in; WIDTH: 0.429in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.084in; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.084in; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.219in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.219in; WIDTH: 2.481in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.219in; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.219in; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="HEIGHT: 0.924in; WIDTH: 3.159in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top rowSpan=2 colSpan=3>
+      <P style="FONT-SIZE: 11pt; FONT-FAMILY: Calibri; MARGIN: 0in"><IMG 
+      src="Cross%20Entropy%20Intuition_files/mht397D(1).tmp" width=470 
+      height=134></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.219in; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.219in; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.703in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="HEIGHT: 3.693in; WIDTH: 2.481in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top rowSpan=5><IMG 
+      alt="Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;Ink Drawings&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼&#13;&#10;￼￼￼&#13;&#10;￼￼&#13;&#10;￼￼￼￼&#13;&#10;" 
+      src="Cross%20Entropy%20Intuition_files/mht3980(1).tmp" width=358 
+      height=532></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.703in; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.703in; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.703in; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.703in; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.406in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.406in; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.406in; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.406in; WIDTH: 0.588in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.406in; WIDTH: 2.139in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.406in; WIDTH: 0.429in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.406in; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.406in; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.117in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.117in; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.117in; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.117in; WIDTH: 0.588in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="HEIGHT: 1.117in; WIDTH: 2.139in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="MARGIN: 0in"><IMG alt="￼￼￼&#13;&#10;￼&#13;&#10;￼￼&#13;&#10;" 
+      src="Cross%20Entropy%20Intuition_files/mht3992(1).tmp" width=308 
+      height=162></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.117in; WIDTH: 0.429in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.117in; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.117in; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.384in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.384in; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.384in; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.384in; WIDTH: 0.588in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.384in; WIDTH: 2.139in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.384in; WIDTH: 0.429in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.384in; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 1.384in; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.08in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.08in; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.08in; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.08in; WIDTH: 0.588in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.08in; WIDTH: 2.139in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.08in; WIDTH: 0.429in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.08in; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.08in; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.08in; WIDTH: 4.022in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.217in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.217in; WIDTH: 2.481in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.217in; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.217in; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.217in; WIDTH: 0.588in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.217in; WIDTH: 2.139in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.217in; WIDTH: 0.429in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.217in; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.217in; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.217in; WIDTH: 4.022in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR>
+  <TR>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.045in; WIDTH: 1px; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt">&nbsp;</P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.045in; WIDTH: 2.481in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.045in; WIDTH: 0.556in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.045in; WIDTH: 0.259in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.045in; WIDTH: 0.588in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.045in; WIDTH: 2.139in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.045in; WIDTH: 0.429in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.045in; WIDTH: 0.22in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.045in; WIDTH: 0.197in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.045in; WIDTH: 0.345in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD>
+    <TD 
+    style="FONT-SIZE: 1pt; HEIGHT: 0.045in; WIDTH: 4.022in; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0pt; PADDING-TOP: 0pt; PADDING-LEFT: 0pt; MARGIN: 0in; PADDING-RIGHT: 0pt" 
+    vAlign=top>
+      <P style="FONT-SIZE: 1pt"></P></TD></TR></TBODY></TABLE></DIV></DIV>
+<DIV>
+<P style="MARGIN: 0in">&nbsp;</P>
+<P 
+style="FONT-SIZE: 9pt; FONT-FAMILY: Arial; COLOR: #969696; DIRECTION: ltr; TEXT-ALIGN: left; MARGIN: 0in">Created 
+with Microsoft OneNote 2016.</P></DIV></BODY></HTML>

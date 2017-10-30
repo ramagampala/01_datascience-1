@@ -1,0 +1,227 @@
+
+<!-- saved from url=(0065)http://chem-eng.utoronto.ca/~datamining/dmc/decision_tree_reg.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Decision Tree Regression</title>
+<script type="text/javascript" async="" src="./Decision Tree Regression_files/ga.js.download"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20171535-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<table border="0" width="800" height="664">
+  <tbody><tr>
+    <td height="21"><font face="Calibri"><a href="http://chem-eng.utoronto.ca/~datamining/dmc/data_mining_map.htm">Map</a>
+      &gt; <a href="http://chem-eng.utoronto.ca/~datamining/dmc/data_mining.htm">Data
+      Mining</a> &gt; <a href="http://chem-eng.utoronto.ca/~datamining/dmc/predicting_the_future.htm"> Predicting the Future</a> &gt;
+      <a href="http://chem-eng.utoronto.ca/~datamining/dmc/modeling.htm"> Modeling</a> &gt; <a href="http://chem-eng.utoronto.ca/~datamining/dmc/regression.htm">Regression</a>
+      &gt; Decision Tree</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <font face="Calibri" color="#008000">&nbsp;</font>
+    </td>
+  </tr>
+  <tr>
+    <td height="25">
+      <h3 align="center"><font face="Calibri" color="#008000">Decision Tree -
+      Regression</font></h3>
+    </td>
+  </tr>
+  <tr>
+    <td height="86"><font face="Calibri">Decision tree builds regression or classification
+      models in the form of a tree structure. It brakes down a dataset into smaller and smaller subsets while at the same time an associated decision tree is incrementally developed.
+      The final result is a tree with <b>decision nodes</b> and <b>leaf nodes</b>.
+      A decision node (e.g., Outlook) has two or more branches (e.g., Sunny,
+      Overcast and Rainy), each representing values for the attribute tested.
+      Leaf node (e.g., Hours Played) represents a decision on the numerical
+      target. The topmost decision node in a tree which corresponds to
+      the best predictor called <b>root node</b>. Decision trees can
+      handle both categorical and numerical data.&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td height="224">
+      <p align="center"><img border="0" src="./Decision Tree Regression_files/Decision_tree_r1.png"></p></td>
+  </tr>
+  <tr>
+    <td height="21">&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="25">
+      <h4><font face="Calibri"><b>Decision Tree Algorithm</b></font></h4>
+    </td>
+  </tr>
+  <tr>
+    <td height="59"><font face="Calibri">The core algorithm for building decision trees
+      called <b>ID3</b> by J. R. Quinlan which employs a top-down, greedy search through the space of possible
+      branches with no backtracking. The ID3 algorithm can be used to construct
+      a decision tree for regression by replacing Information Gain with <i>Standard
+      Deviation</i> <i>Reduction</i>.</font></td>
+  </tr>
+  <tr>
+    <td height="21"></td>
+  </tr>
+  <tr>
+    <td height="21"><font face="Calibri"><b>Standard Deviation</b></font></td>
+  </tr>
+  <tr>
+    <td height="21"><font face="Calibri"> A decision tree is built top-down from a root node and involves partitioning the data into subsets that contain instances with similar
+      values (homogenous). We use standard deviation to calculate the homogeneity of a
+      numerical sample.
+      If the numerical sample is completely homogeneous its standard deviation is zero.</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <p align="center"></p></td>
+  </tr>
+  <tr>
+    <td height="21"><font face="Calibri">a) Standard deviation for <b>one</b>
+      attribute:</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <p align="center"><img border="0" src="./Decision Tree Regression_files/Decision_tree_r2.png"></p></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <font face="Calibri">b) Standard deviation for <b>two</b>  attributes:</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <p align="center"><img border="0" src="./Decision Tree Regression_files/Decision_tree_r3.png"></p></td>
+  </tr>
+  <tr>
+    <td height="21"><font face="Calibri">&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td height="21"><font face="Calibri"><b>Standard Deviation Reduction</b></font></td>
+  </tr>
+  <tr>
+    <td height="21"><font face="Calibri">The standard deviation reduction is based on the decrease in
+      standard deviation after a dataset is split on an attribute.
+      Constructing a decision tree is all about finding attribute that returns
+      the highest standard deviation reduction (i.e., the most homogeneous branches).</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+    </td>
+  </tr>
+  <tr>
+    <td height="21">
+      <i>Step 1</i><font face="Calibri">: The standard deviation of the target is
+      calculated.&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <font face="Calibri"><b>&nbsp;</b></font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <p align="center"><font face="Calibri"><b>Standard deviation (Hours
+      Played) = 9.32</b></font></p></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <font face="Calibri">&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <i>Step 2</i><font face="Calibri">:
+      The dataset is then split on the different attributes. The standard
+      deviation for each branch is calculated. The resulting standard deviation is subtracted from the
+      standard deviation before the split.
+      The result is the standard deviation reduction.&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <p align="center"><img border="0" src="./Decision Tree Regression_files/Decision_tree_r4.png"></p></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <p align="center"><img border="0" src="./Decision Tree Regression_files/Decision_tree_r5.png"></p></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <i>Step 3</i><font face="Calibri">: The attribute with the largest
+      standard deviation reduction is chosen for the decision node.&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <p align="center"><img border="0" src="./Decision Tree Regression_files/Decision_tree_r6.png"></p></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <i>Step 4a</i><font face="Calibri">: Dataset is divided based on the
+      values of the selected attribute.</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <p align="center"><img border="0" src="./Decision Tree Regression_files/Decision_tree_r7.png"></p></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <i>Step 4b</i><font face="Calibri">: A branch set with standard deviation
+      more than 0 needs further splitting.&nbsp;</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <font face="Calibri">In practice, we need some termination criteria. For
+      example, when standard deviation for the branch becomes smaller than a certain fraction
+      (e.g., 5%) of standard deviation for the full dataset <i>OR</i> when too few instances remain
+      in the branch (e.g., 3).</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <p align="center"><img border="0" src="./Decision Tree Regression_files/Decision_tree_r8.png"></p></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <i>Step 5</i><font face="Calibri">:
+      The process is run recursively on the non-leaf branches, until all data is
+      processed.</font></td>
+  </tr>
+  <tr>
+    <td height="21">
+      <font face="Calibri">When the number of instances is more than one at a
+      leaf node we calculate the <i>average</i> as the final value for the
+      target.</font></td>
+  </tr>
+  <tr>
+    <td height="21">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="21">
+    <font face="Calibri"><a href="http://chem-eng.utoronto.ca/~datamining/dmc/decision_tree_reg_exercise.htm"><span style="background-color: #CCFFFF">Exercise</span></a></font>
+    </td>
+  </tr>
+  <tr>
+    <td height="21">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="21"><img border="0" src="./Decision Tree Regression_files/invent.png" width="27" height="24">
+      <font face="Calibri">Try to invent a new algorithm to construct a decision
+      tree from data using <a href="http://chem-eng.utoronto.ca/~datamining/dmc/mlr.htm">MLR</a> instead of average at the
+      leaf node.</font></td>
+  </tr>
+  <tr>
+    <td height="21"></td>
+  </tr>
+</tbody></table>
+
+
+
+
+</body></html>
